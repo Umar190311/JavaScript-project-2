@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: blanchedalmond;">
+    
+        <!-- Button to start calculations -->
+        <button onclick="startMultiplication()">Start Calculation</button>
+    
+        <p id="demo" style="border: 3px solid red;background-color: black;color: white;"></p>
+    
+        <script>
+            // Function to multiply two numbers
+            function multiply(x , y) {
+                return x * y;
+            }
+
+            // Function that runs when button is clicked
+            function startMultiplication() {
+                var result1 = multiply(5, 6);
+                var result2 = multiply(8, 9);
+                var result3 = multiply(12, 4);
+                var result4 = multiply(40,100);
+                var result5 = multiply(999,1);
+                var result6 = multiply(876,15);
+                var result7 = multiply(60,30);
+
+                // Show output inside the <p> tag
+                document.getElementById("demo").innerHTML =
+                    "5 × 6 = " + result1 + "<br>" +
+                    "8 × 9 = " + result2 + "<br>" +
+                    "12 × 4 = " + result3 + "<br>" +
+                    "40 × 100 = " + result4 + "<br>" +
+                    "999 × 1 = " + result5 + "<br>" +
+                    "876 × 15 = " + result6 + "<br>" +
+                    "60 × 30 = " + result7;
+            }
+        </script>
+    </body>
+    
+    </html>
+
+</body>
+</html>
