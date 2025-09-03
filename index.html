@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Multiplication Using Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f0f8ff, #dbeafe);
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #2563eb;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #result {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #111827;
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 10px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-<body style="background-color: blanchedalmond;">
-    
-        <!-- Button to start calculations -->
-        <button onclick="startMultiplication()">Start Calculation</button>
-    
-        <p id="demo" style="border: 3px solid red;background-color: black;color: white;"></p>
-    
-        <script>
-            // Function to multiply two numbers
-            function multiply(x , y) {
-                return x * y;
-            }
 
-            // Function that runs when button is clicked
-            function startMultiplication() {
-                var result1 = multiply(5, 6);
-                var result2 = multiply(8, 9);
-                var result3 = multiply(12, 4);
-                var result4 = multiply(40,100);
-                var result5 = multiply(999,1);
-                var result6 = multiply(876,15);
-                var result7 = multiply(60,30);
+<body>
+    <h1>🔢 Multiplication Using Functions</h1>
+    <p>Click on the buttons to perform multiplication</p>
 
-                // Show output inside the <p> tag
-                document.getElementById("demo").innerHTML =
-                    "5 × 6 = " + result1 + "<br>" +
-                    "8 × 9 = " + result2 + "<br>" +
-                    "12 × 4 = " + result3 + "<br>" +
-                    "40 × 100 = " + result4 + "<br>" +
-                    "999 × 1 = " + result5 + "<br>" +
-                    "876 × 15 = " + result6 + "<br>" +
-                    "60 × 30 = " + result7;
-            }
-        </script>
-    </body>
-    
-    </html>
+    <!-- Buttons for multiplication examples -->
+    <button onclick="multiply(5)">Multiply (5 × default)</button>
+    <button onclick="multiply(5, 10)">Multiply (5 × 10)</button>
+    <button onclick="multiply(7)">Multiply (7 × default)</button>
+    <button onclick="multiply(12, 3)">Multiply (12 × 3)</button>
+    <button onclick="multiply(15, 15)">Multiply (15 × 15)</button>
 
+    <div id="result">Result will appear here...</div>
+
+    <script>
+        // Multiplication function with default parameter
+        function multiply(x, y = 2) {
+            document.getElementById("result").innerHTML =
+                "Result of multiplication: " + (x * y);
+        }
+    </script>
 </body>
+
 </html>
